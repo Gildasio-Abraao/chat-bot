@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+body {
+    background: url(../images/back.jpg);
+    background-size: cover;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chat-container {
+    background: #ffffff59;
+    width: 20rem;
+    height: 32rem;
+    border-radius: 30px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    box-shadow: 0px 0px 25px #b1b1b140;
+}
+.chat-container:hover {
+    background: white;
+}
+.head-chat {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to right, #673ab7, #512da8);
+    padding: 17px 15px;
+    border-radius: 28px 28px 0 0px;
+}
+.head-chat img {
+    width: 2.2rem;
+}
+.head-chat input::placeholder {
+    color: white;
+}
+.head-chat input {
+    border: none;
+    padding: 6px;
+    padding-left: 15px;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid #ffffff75;
+}
+/*chat-box*/
+.chat-box {
+    box-sizing: border-box;
+    width: 100%;
+    height: 73%;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: system-ui;
+}
+.chat-box::-webkit-scrollbar-track {
+    background-color: #FFEB3B;
+}
+.chat-box::-webkit-scrollbar {
+    width: 4px;
+    background: #F4F4F4;
+}
+.chat-box::-webkit-scrollbar-thumb {
+    background: #5530ab;
+}
+
+.message {
+    background: #DBD65C;
+    font-size: 1rem;
+    color: white;
+    padding: 10px 20px;
+    width: 87%;
+    text-align: left;
+    overflow-wrap: anywhere;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-weight: 100;
+}
+@keyframes bot-animation {
+    0%{
+        opacity: 0;
+        margin: 5px -20px;
+    }
+    100%{
+        opacity: 1;
+        margin: 5px 0px;
+    }
+}
+.bot {
+    background: #909090;
+    margin: 5px 0px;
+    animation: bot-animation 0.3s;
+}
+@keyframes user-animation {
+    0%{
+        opacity: 0;
+        margin: 5px 115px;
+    }
+    100%{
+        opacity: 1;
+        margin: 5px 45px;
+    }
+}
+.user {
+    margin: 5px 45px;
+    animation: user-animation 0.3s;
+}
+/*form*/
+form {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+form input[type = 'text'] {
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 2px solid #e4e4e4;
+    color: #525252;
+    font-weight: 600;
+    font-family: system-ui;
+    background: transparent;
+}
+form input[type = 'text']::placeholder {
+    color: #d8d7d7;
+}
+form button[type = 'submit'] {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: url(../images/icons/send.png);
+    background-size: cover;
+    transform: rotate(0deg);
+    color: transparent;
+    cursor: pointer;
+    opacity: 50%;
+    transition: 0.3s;
+}
+form button[type = 'submit']:hover {
+     transform: rotate(60deg);
+    opacity: 100%;
+}
